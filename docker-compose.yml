@@ -18,8 +18,8 @@ services:
     - 4433:443
     - 8080:80
   environment:
-    - PGADMIN_DEFAULT_EMAIL=techin-b@rmutp.ac.th
-    - PGADMIN_DEFAULT_PASSWORD=0632475779
+    - PGADMIN_DEFAULT_EMAIL=${PG_EMAIL}
+    - PGADMIN_DEFAULT_PASSWORD=${PG_PASS}
   restart: unless-stopped
  strapi:
   container_name: techinbrs-strapi
@@ -31,6 +31,6 @@ services:
     - DATABASE_HOST=192.168.56.1
     - DATABASE_PORT=54322
     - DATABASE_NAME=strapi
-    - DATABASE_USERNAME=techinbrs
-    - DATABASE_PASSWORD=54322
+    - DATABASE_USERNAME=${STP_USER}
+    - DATABASE_PASSWORD=${STP_PASS}
   restart: unless-stopped

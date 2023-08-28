@@ -6,8 +6,8 @@ services:
    ports:
      - 54322:5432
    environment:
-     - POSTGRES_USER=techinbrs
-     - POSTGRES_PASSWORD=0632475779
+     - POSTGRES_USER=${DB_USER}
+     - POSTGRES_PASSWORD=${DB_PASS}
    image: postgres:14.4
    restart: unless-stopped
 
@@ -18,7 +18,7 @@ services:
     - 4433:443
     - 8080:80
   environment:
-    - PGADMIN_DEFAULT_EMAIL=techin-p@rmutp.ac.th
+    - PGADMIN_DEFAULT_EMAIL=techin-b@rmutp.ac.th
     - PGADMIN_DEFAULT_PASSWORD=0632475779
   restart: unless-stopped
  strapi:

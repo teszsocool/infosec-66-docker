@@ -33,4 +33,5 @@ services:
     - DATABASE_NAME=${STP_NAME}
     - DATABASE_USERNAME=${STP_USER}
     - DATABASE_PASSWORD=${STP_PASS}
+    - DATABASE_SSL=${STP_SSL}
   restart: unless-stopped
